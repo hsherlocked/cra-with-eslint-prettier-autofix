@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import './App.css'
+import axios from 'axios'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const fn = async () => {
+        const res = await axios.get('/api/demo?name=123')
+        const condition = 1 + 1 === 2
+        if (condition) {
+            console.log(res)
+        }
+    }
+    return (
+        <div className="App" onClick={fn}>
+            123
+        </div>
+    )
 }
 
-export default App;
+export default App
