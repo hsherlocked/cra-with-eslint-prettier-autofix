@@ -7,7 +7,7 @@ module.exports = function (app) {
     app.use(
         proxy('/api', {
             // 这里故意写一个错误地址
-            target: 'http://192.168.3.34:8081',
+            target: 'http://192.168.3.3:8081',
             changeOrigin: true,
             pathRewrite: {
                 '^/api': '',
