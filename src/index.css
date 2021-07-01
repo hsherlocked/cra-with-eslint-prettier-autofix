@@ -1,8 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
 
-body {
-    margin: 8px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.somestyle {
+    @apply px-4 py-2 rounded font-semibold bg-gray-200 text-black;
 }

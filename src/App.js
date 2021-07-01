@@ -34,7 +34,7 @@ function App() {
     }, [name, age]) // name age改变时，重新render B组件
 
     return (
-        <div className="App">
+        <div className="somestyle">
             <button onClick={onChangeName}>改变name</button>
             <button onClick={onChangeAge}>改变age</button>
             <button onClick={fn}>fetch</button>
